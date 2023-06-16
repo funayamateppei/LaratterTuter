@@ -13,7 +13,8 @@ class TweetController extends Controller
      */
     public function index()
     {
-        return response()->view('tweet.index');
+        $tweets = [];
+        return response()->view('tweet.index', compact('tweets'));
     }
 
     /**
