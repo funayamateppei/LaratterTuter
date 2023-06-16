@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Tweet extends Model
 {
@@ -17,5 +18,10 @@ class Tweet extends Model
     public static function getAllOrderByUpdated_at()
     {
         return self::orderBy('updated_at', 'desc')->get();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
