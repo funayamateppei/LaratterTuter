@@ -46,7 +46,7 @@ class TweetController extends Controller
         }
         // create()は最初から用意されている関数
         // 戻り値は挿入されたレコードの情報
-        $data = $request->merge(['user_id' => Auth::user()->id])->all();
+        $data = $request->merge(['user_id' => Auth::id()])->all();
         $result = Tweet::create($data);
         // ルーティング「tweet.index」にリクエスト送信（一覧ページに移動）
         return redirect()->route('tweet.index');
