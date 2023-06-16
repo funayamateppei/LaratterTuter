@@ -13,7 +13,7 @@ class TweetController extends Controller
      */
     public function index()
     {
-        $tweets = [];
+        $tweets = Tweet::getAllOrderByUpdated_at();
         return response()->view('tweet.index', compact('tweets'));
     }
 
