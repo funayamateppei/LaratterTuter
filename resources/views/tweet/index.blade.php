@@ -20,7 +20,7 @@
             <tbody>
               @foreach ($tweets as $tweet)
               <tr class="hover:bg-gray-lighter">
-                <td class="py-4 px-6 border-b border-gray-light dark:border-gray-600">
+                <td class="py-4 px-6 border-b border-gray-light dark:border-gray-600 flex justify-between items-center">
                   <a href="{{ route('tweet.show',$tweet->id) }}">
                     <!-- 🔽 追加 -->
                     <p class="text-left text-gray-800 dark:text-gray-200">{{$tweet->user->name}}</p>
