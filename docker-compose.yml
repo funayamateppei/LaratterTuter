@@ -1,6 +1,6 @@
 # For more information: https://laravel.com/docs/sail
 
-version: "3"
+# version: "3"
 services:
     laravel.test:
         build:
@@ -89,6 +89,7 @@ services:
             - sail
     selenium:
         image: "selenium/standalone-chrome"
+        platform: linux/amd64
         volumes:
             - "/dev/shm:/dev/shm"
         networks:
